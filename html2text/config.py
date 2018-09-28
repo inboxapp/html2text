@@ -1,7 +1,9 @@
+from __future__ import unicode_literals
+
 import re
 
 # Use Unicode characters instead of their ascii pseudo-replacements
-UNICODE_SNOB = 0
+UNICODE_SNOB = True
 
 # Marker to use for marking tables for padding post processing
 TABLE_MARKER_FOR_PAD = "special_marker_for_table_padding"
@@ -25,8 +27,8 @@ INLINE_LINKS = True
 # Protect links from line breaks surrounding them with angle brackets (in
 # addition to their square brackets)
 PROTECT_LINKS = False
-# WRAP_LINKS = True
-WRAP_LINKS = True
+
+WRAP_LINKS = False
 
 # Number of pixels Google indents nested lists
 GOOGLE_LIST_INDENT = 36
@@ -46,7 +48,7 @@ PAD_TABLES = False
 
 # Convert links with same href and text to <href> format
 # if they are absolute links
-USE_AUTOMATIC_LINKS = True
+USE_AUTOMATIC_LINKS = False
 
 # For checking space-only lines on line 771
 RE_SPACE = re.compile(r'\s\+')
@@ -136,3 +138,8 @@ IGNORE_TABLES = False
 # Use a single line break after a block element rather than two line breaks.
 # NOTE: Requires body width setting to be 0.
 SINGLE_LINE_BREAK = False
+
+
+# Use double quotation marks when converting the <q> tag.
+OPEN_QUOTE = '"'
+CLOSE_QUOTE = '"'
